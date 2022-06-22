@@ -5,6 +5,6 @@ wait(3)
 game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
 Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if State == Enum.TeleportState.Started then
-		   syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/sayfst/magnatta/main/toh'))()")
+		   syn.queue_on_teleport("wait(3) loadstring(game:HttpGet('https://raw.githubusercontent.com/sayfst/magnatta/main/toh'))()")
 	end
 end)
