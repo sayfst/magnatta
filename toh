@@ -1,3 +1,10 @@
 game.RunService.RenderStepped:Connect(function()
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.Fim.Color.FinalPart.CFrame
 end)
+wait(3)
+game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+Players.LocalPlayer.OnTeleport:Connect(function(State)
+	if State == Enum.TeleportState.Started then
+		   loadstring(game:HttpGet('https://raw.githubusercontent.com/sayfst/magnatta/main/toh'))()
+	end
+end)
